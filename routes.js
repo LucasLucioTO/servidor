@@ -15,4 +15,19 @@ routes.get("/nomeRota", (req, res) => {
     res.sendFile(__dirname + "/index.html");
 
 })
+
+routes.get("/retornaUsuario", (req, res) => {
+
+    res.json({
+        nome: "Micledson",
+        idade: 19,
+        sexo: "M",
+        ondeMora: {
+            rua: "Lino Barbosa",
+            bairro: "Baixa Grande",
+            numero: 42,
+            cep: "57307-184",
+        }
+    })
+})
 module.exports = routes;
